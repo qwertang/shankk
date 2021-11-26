@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾达商品商城</title>
+    <link rel="stylesheet" href="css/导航栏.css">
+    <link rel="stylesheet" href="css/三个div一键.css">
+    <link rel="stylesheet" href="css/页脚.css">
+    <link rel="shortcut icon" href="imges/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/jingdong.css">
+    <link rel="stylesheet" href="css/华为.css">
+    <link rel="stylesheet" href="icofont/iconfont.css">
+    <script src="js/commfdj.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <style>
+       .quickb{
+        width: 100%;
+        height: 64px;
+        background-color: rgb(243, 243, 243);
+        margin-top: 0;
+    }
+    .quickb ul{
+        display: block;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .quickb ul li{
+        display: inline-block;
+        width: 136px;
+        height: 64px;
+        line-height: 60px;
+        
+        cursor: pointer;
+    }
+    .quickd{
+        background-color: rgb(255, 255, 255);
+        color: rgb(168, 168, 168);
+    }
+    .quickb ul li.line{
+        width: 1px;
+        height: 64px;
+        line-height: 60px;
+        background-color: rgba(255, 255, 255, 0.05);
+        vertical-align: middle;
+    }
+    .quickitem{
+        display: none;
+    }
+    .quicktab-1{
+        width: 100%;
+        height: 950px;;
+        /* background-color: blanchedalmond; */
+    }
+    .quicltab-1-1{
+        width: 100%;
+        height: 430px;
+        background-color: rgb(255, 255, 255);
+    }
+    .quicktab-1-2{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-left: 5%;
+        overflow: hidden;
+    }
+    .quicktab-1-2 h1{
+        font-weight: 500;
+        font-size: 20px;
+        color: #fd4f00;
+        padding-bottom: 25px;
+        border-bottom: 1px solid coral;
+    }
+    .quicktab-1-2 p{
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+    .quicltab-2-1{
+        width: 100%;
+        height: 500px;
+        background-color: rgb(247, 247, 247);
+    }
+    .quicltab-2-1 h2{
+        font-size: 20px;
+        font-weight: 400;
+        color: #fd4f00;
+        padding-bottom: 30px;
+        margin-left: 80px;
+        padding-top: 25px;
+    }
+    .quicltab-2-2{
+        width: 100%;
+    }
+    .quicltab-2-2 p{
+        font-size: 14px;
+        font-family: 250;
+        padding-bottom: 40px;
+        color: rgb(92, 92, 92);
+    }
+    .quicltab-2-3{
+        width: 40%;
+        height: 300px;
+        /* background-color: aqua; */
+        float: left;
+        margin-left: 80px;
+    }
+    .quicltab-2-4{
+        width: 40%;
+        height: 300px;
+        /* background-color: blueviolet; */
+        float: left;
+        margin-left: 50px;
+    }
+    .quickb ul li:hover{
+        color: #fd4f00;
+    }
+    </style>
+</head>
+<body>
+    <div class="shopcar">
+        <div class="iconservice">
+            <div class="iconservice-1-1">
+                <a href="index.html"><span class="iconfont icon-zaixiankefu"></span></a>
+            </div>
+        </div>
+        <div class="iconservice-1">
+            <div class="iconservice-1-2">
+                <a href="javascript:;;"><span class="iconfont icon-erweima"></span></a>
+                <div class="iconservice-1-2-1">
+                    <img src="imges/二维码1.jpg" alt="" width="150px" height="150px" >
+                </div>
+            </div>
+        </div>
+        <div class="iconservice-2">
+            <div class="iconservice-1-3"><a href="#"><span class="iconfont icon-fanhui3"></span></a></div>
+        </div>
+        <header>
+            <div class="tenda">
+                <nav id="nav">
+                    <div class="logo">
+                        <a href="index.html"><img src="imges/mlogo1.png" alt=""></a>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="register.html" >点击登录</a>
+                            <!-- <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">穿墙宝<img src="imgesicon/1.png" alt=""></a></li>
+                                    <li><a href="#">路由器<img src="imgesicon/2.png" alt=""></a></li>
+                                    <li><a href="#">无线网卡<img src="imgesicon/3.png" alt=""></a></li>
+                                    <li><a href="#">交换机<img src="imgesicon/4.png" alt=""></a></li>
+                                    <li><a href="#">电力线<img src="imgesicon/5.png" alt=""></a></li>
+                                    <li><a href="#">信号放大器<img src="imgesicon/6.png" alt=""></a></li>
+                                    <li><a href="#">解入终端<img src="imgesicon/7.png" alt=""></a></li>
+                                    <li><a href="#">智能硬器<img src="imgesicon/8.png" alt=""></a></li>
+                                </ul>
+                            </div> -->
+                        </li>
+                        <li class="nav-item"><a href="router.html">商用产品</a>
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">企业路由器<img src="imgesicon/9.png" alt=""></a></li>
+                                    <li><a href="#">AP控制器<img src="imgesicon/10.png" alt=""></a></li>
+                                    <li><a href="#">企业交换机<img src="imgesicon/11.png" alt=""></a></li>
+                                    <li><a href="#">企业无线AP<img src="imgesicon/12.png" alt=""></a></li>
+                                    <li><a href="#">室外网桥&基站<img src="imgesicon/13.png" alt=""></a></li>
+                                    <li><a href="#">基站天线<img src="imgesicon/14.png" alt=""></a></li>
+                                    <li><a href="#">综合类<img src="imgesicon/15.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="smartcamera.html">安防监控</a>
+                            <!-- 二级菜单 S-->
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">智能摄像头<img src="imgesicon/16.png" alt=""></a></li>
+                                    <li><a href="#">监控套装<img src="imgesicon/17.png" alt=""></a></li>
+                                    <li><a href="#">影像硬盘<img src="imgesicon/18.png" alt=""></a></li>
+                                    <li><a href="#">腾达CP7<img src="imgesicon/19.png" alt=""></a></li>
+                                    <li><a href="#">腾达智能SP<img src="imgesicon/20.png" alt=""></a></li>
+                                    <li><a href="#">CP4<img src="imgesicon/21.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="servesustain.html">服务支持</a>
+                            <!-- 二级菜单 S-->
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">在线客服<img src="imgesicon/22.png" alt=""></a></li>
+                                    <li><a href="#">维修网点<img src="imgesicon/23.png" alt=""></a></li>
+                                    <li><a href="#">视频教程<img src="imgesicon/24.png" alt=""></a></li>
+                                    <li><a href="#">宣传视频<img src="imgesicon/25.png" alt=""></a></li>
+                                    <li><a href="#">下载中心<img src="imgesicon/26.png" alt=""></a></li>
+                                    <li><a href="#">保修政策<img src="imgesicon/27.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <!-- 二级菜单 E-->                    
+                        </li>
+                        <li class="nav-item"><a href="buyproduct.html">如何购买</a>
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">宾馆<img src="imgesicon/28.png" alt=""></a></li>
+                                    <li><a href="#">视频监控<img src="imgesicon/29.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="quick.html">快速链接</a>
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">关于腾达<img src="imgesicon/30.png" alt=""></a></li>
+                                    <li><a href="#">联系我们<img src="imgesicon/31.png" alt=""></a></li>
+                                    <li><a href="#">售后网点<img src="imgesicon/32.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="tendacomm.html">腾达商品</a>
+                            <!-- <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">关于腾达<img src="imgesicon/30.png" alt=""></a></li>
+                                    <li><a href="#">联系我们<img src="imgesicon/31.png" alt=""></a></li>
+                                    <li><a href="#">售后网点<img src="imgesicon/32.png" alt=""></a></li>
+                                </ul>
+                            </div> -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="comm">
+            <div class="commdhl">
+                <img src="imges/5cbbc37dd9309a45.gif" alt="">
+            </div>
+            <div class="comms">
+                <div class="commfdj">
+                    <img src="imges/commfdj1.jpg" alt="" width="400px" height="400px">
+                    <div class="commfdja"></div>
+                    <div class="commfdjb">
+                        <img src="imges/commfdj2.jpg" alt=""  class="commfdjbimg">
+                    </div>
+                    <div class="xjd"><img src="jdimg/lyq1.jpg" alt=""></div>
+                    <div class="xjd"><img src="jdimg/200m.jpg" alt=""></div>
+                    <div class="xjd"><img src="jdimg/5g.jpg" alt=""></div>
+                    <div class="xjd"><img src="jdimg/jdlyq.jpg" alt=""></div>
+                    <div class="xjd"><img src="jdimg/lyq1.jpg" alt=""></div>
+                </div>
+                <div class="com">
+                    <div class="sku-name">
+                        TD-LINK千兆路由器 AC1200无线家用 5G双频WiFi WDR5620千兆 高速路由穿墙 IPv6 内配千兆网线 光纤适用
+                    </div>
+                    <div class="sku-news">
+                        【TD-LINK爆款Wi-Fi6】AX3000新一代满血WiFi6/易展一键MESH互联/配原装千兆网线点击抢购】<a href="" >查看 > </a>
+                    </div>
+                    <div class="jdhd">
+                        <img src="imges/jdhd.png" alt="" width="750px">
+                    </div>
+                    <div class="tdjg">
+                        <div class="tdjg1">
+                            <div class="tdjd">
+                                <div class="dt">京东价</div>
+                                <div class="dd">
+                                    <span class="price">
+                                        <span>￥</span>
+                                        <span class="price1">149.00</span>
+                                        <a href="" class="notice" style="color: #005aa0; font-size: 13px; margin-left: 12px; vertical-align: 2px;">降价通知</a>
+                                    </span>
+                                </div>
+                                <div class="icons">
+                                    <div class="icons1">
+                                        <p>累计评价</p>
+                                        <a href="">200万+</a>
+                                    </div>
+                                </div>
+                                <div class="summmary">
+                                    <div class="summmary1">
+                                        <div class="dt">促 销</div>
+                                        <div class="dd">
+                                            <a href="" style="color: red; border: 1px solid red; font-size: 13px; padding: 1px;">换购</a>
+                                            <em style="font-size: 13px; color: rgb(176,153,163); margin-left: 5px;">购买1件可优惠换购热销商品</em>
+                                            <a href=""><em style="font-size: 13px; color: rgb(176,153,163); margin-left: 5px;">立即换购</em></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chose">
+                                    <div class="chose1">
+                                        <div class="dt">增值业务</div>
+                                        <div class="dd">
+                                            <a href="" class="ddgj">高价回收、极速到账</a>
+                                        </div>
+                                    </div>
+                                    <div class="stock">
+                                        <div class="stock1">
+                                            <div class="dt">配 送 至</div>
+                                            <div class="dd">
+                                                <div class="dizi">
+                                                    湖北武汉市江夏区武汉软件工程职业学院
+                                                </div>
+                                                <div class="yhuo">有货</div>
+                                                <div class="ychi">
+                                                    <div class="ychi1">
+                                                        支持
+                                                    </div>
+                                                    <div class="ychi2">
+                                                        <span>可配送海外</span>
+                                                        <span>99元免基础运费</span>
+                                                        <span>30天保价</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="jdwl">
+                                        <div class="dd">
+                                            <div class="jdimg"><img src="imges/jdwl.png" alt="" width="86px" height="16px"></div>
+                                            <div class="jdwla">
+                                                <span>京准达</span>
+                                                <span>211限时到达</span>
+                                                <span>京尊达</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="zl">
+                                        <div class="dt">重量</div>
+                                        <div class="dd">
+                                            <div class="zla">0.8kg</div>
+                                        </div>
+                                    </div>
+                                    <div class="tdicon">
+                                        <div class="tdicon1"></div>
+                                        <span>恭喜您已添加到购物车！</span>
+                                    </div>
+                                    <div class="tdicona">
+                                        <div class="tdicon2"></div>
+                                        <span>买这么多产品干啥！</span>
+                                    </div>
+                                    <div class="p-num">
+                                        <div class="quantity-form">
+                                            <input type="text" class="itxt" value="1">
+                                            <a href="javascript:;" class="decrement" >-</a>
+                                            <a href="javascript:;" class="increment" >+</a>
+                                        </div>
+                                        <a href="javascript:;;" class="btnlg" style="color: white;">
+                                            加入购物车
+                                        </a>
+                                        <a href="javascript:;;" class="btnlga" style="color: white;">
+                                            去结算
+                                        </a>
+                                        <div class="zojia">
+                                            总价:
+                                            <span>￥</span>
+                                            <span class="yuan">149.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quickb">
+            <ul>
+                <li class="quickd">华为产品</li>
+                <li>腾达产品</li>
+                <li>腾达2021</li>
+                <li>腾达2022</li>
+            </ul>
+        </div>
+        <div class="quicktab">
+            <div class="quickitem" style="display: block;">
+                <div class="facility">
+                    <div class="facility-1">
+                        <ul class="facility-1-1">
+                            <li class="facility-1-2 facility-big" style="width: 472px; height: 290px;">
+                                <div class="hwlbt">
+                                    <a href="" title="华为路由器"><img src="imges/19.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw18.png" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw19.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw20.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                </div>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw1.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由AX3 Pro</div>
+                                <p class="facility-1-2-3">华为分享一键联网</p>
+                                <p class="facility-1-2-4">￥9999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw2.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为移动路由强化版</div>
+                                <p class="facility-1-2-3">赠5GB流量卡</p>
+                                <p class="facility-1-2-4">￥8888</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw3.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由AX2 ProMAX</div>
+                                <p class="facility-1-2-3">无线放大到穿墙</p>
+                                <p class="facility-1-2-4">￥1999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw4.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由Q2S</div>
+                                <p class="facility-1-2-3">一个顶俩 覆盖无忧</p>
+                                <p class="facility-1-2-4">￥5999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw5.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由Q2S(子路由)</div>
+                                <p class="facility-1-2-3">哪里信号不好插哪里</p>
+                                <p class="facility-1-2-4">￥6999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw6.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为随行WiFi3(白色)</div>
+                                <p class="facility-1-2-3">赠999GB流量</p>
+                                <p class="facility-1-2-4">￥6666</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw7.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由 WS5200 增强版</div>
+                                <p class="facility-1-2-3">智能加速 </p>
+                                <p class="facility-1-2-4">￥6666</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw8.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由WS5200四核版</div>
+                                <p class="facility-1-2-3">限时打一折只需要999</p>
+                                <p class="facility-1-2-4">￥999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="quickitem">
+                <div class="facility">
+                    <div class="facility-1">
+                        <ul class="facility-1-1">
+                            <li class="facility-1-2 facility-big" style="width: 472px; height: 290px;">
+                                <div class="hwlbt">
+                                    <a href="" title="华为路由器"><img src="imges/hw9.png" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw21.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw22.png" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw19.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                </div>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw10.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为超级快充GaN</div>
+                                <p class="facility-1-2-3">限时直降20元 </p>
+                                <p class="facility-1-2-4">￥399</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw11.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为无线充电器</div>
+                                <p class="facility-1-2-3">限时直降40元 </p>
+                                <p class="facility-1-2-4">￥329</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw12.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为多协议快充</div>
+                                <p class="facility-1-2-3">预定立省20元</p>
+                                <p class="facility-1-2-4">￥179</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw13.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为车载充电器</div>
+                                <p class="facility-1-2-3">限时抢购</p>
+                                <p class="facility-1-2-4">￥888</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw14.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为5A数据线</div>
+                                <p class="facility-1-2-3">一米长的数据线</p>
+                                <p class="facility-1-2-4">￥99</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw15.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为USB数据线</div>
+                                <p class="facility-1-2-3">赠5GB流量卡</p>
+                                <p class="facility-1-2-4">￥89</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw16.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为超级快充无线</div>
+                                <p class="facility-1-2-3">智能无线充电</p>
+                                <p class="facility-1-2-4">￥999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw17.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为超级快充2021</div>
+                                <p class="facility-1-2-3">2021限定版</p>
+                                <p class="facility-1-2-4">￥666</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="quickitem">
+                <div class="facility">
+                    <div class="facility-1">
+                        <ul class="facility-1-1">
+                            <li class="facility-1-2 facility-big" style="width: 472px; height: 290px;">
+                                <div class="hwlbt">
+                                    <a href="" title="华为路由器"><img src="imges/19.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw18.png" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw19.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw20.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                </div>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw1.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由AX3 Pro</div>
+                                <p class="facility-1-2-3">华为分享一键联网</p>
+                                <p class="facility-1-2-4">￥9999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw2.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为移动路由强化版</div>
+                                <p class="facility-1-2-3">赠5GB流量卡</p>
+                                <p class="facility-1-2-4">￥8888</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw3.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由AX2 ProMAX</div>
+                                <p class="facility-1-2-3">无线放大到穿墙</p>
+                                <p class="facility-1-2-4">￥1999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw4.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由Q2S</div>
+                                <p class="facility-1-2-3">一个顶俩 覆盖无忧</p>
+                                <p class="facility-1-2-4">￥5999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw5.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由Q2S(子路由)</div>
+                                <p class="facility-1-2-3">哪里信号不好插哪里</p>
+                                <p class="facility-1-2-4">￥6999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw6.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为随行WiFi3(白色)</div>
+                                <p class="facility-1-2-3">赠999GB流量</p>
+                                <p class="facility-1-2-4">￥6666</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw7.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由 WS5200 增强版</div>
+                                <p class="facility-1-2-3">智能加速 </p>
+                                <p class="facility-1-2-4">￥6666</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw8.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为路由WS5200四核版</div>
+                                <p class="facility-1-2-3">限时打一折只需要999</p>
+                                <p class="facility-1-2-4">￥999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="quickitem">
+                <div class="facility">
+                    <div class="facility-1">
+                        <ul class="facility-1-1">
+                            <li class="facility-1-2 facility-big" style="width: 472px; height: 290px;">
+                                <div class="hwlbt">
+                                    <a href="" title="华为路由器"><img src="imges/hw9.png" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw21.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw22.png" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                    <a href="" title="华为路由器"><img src="imges/hw19.jpg" alt="" width="472px" height="290px" style="border-radius: 15px;"></a>
+                                </div>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw10.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为超级快充GaN</div>
+                                <p class="facility-1-2-3">限时直降20元 </p>
+                                <p class="facility-1-2-4">￥399</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw11.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为无线充电器</div>
+                                <p class="facility-1-2-3">限时直降40元 </p>
+                                <p class="facility-1-2-4">￥329</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw12.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为多协议快充</div>
+                                <p class="facility-1-2-3">预定立省20元</p>
+                                <p class="facility-1-2-4">￥179</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw13.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为车载充电器</div>
+                                <p class="facility-1-2-3">限时抢购</p>
+                                <p class="facility-1-2-4">￥888</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw14.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为5A数据线</div>
+                                <p class="facility-1-2-3">一米长的数据线</p>
+                                <p class="facility-1-2-4">￥99</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw15.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为USB数据线</div>
+                                <p class="facility-1-2-3">赠5GB流量卡</p>
+                                <p class="facility-1-2-4">￥89</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw16.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为超级快充无线</div>
+                                <p class="facility-1-2-3">智能无线充电</p>
+                                <p class="facility-1-2-4">￥999</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                            <li class="facility-1-2">
+                                <div class="facility-1-2-1">
+                                    <a href="" title=""><img src="imges/hw17.png" alt="" width="150px" height="150px" ></a>
+                                </div>
+                                <div class="facility-1-2-2">华为超级快充2021</div>
+                                <p class="facility-1-2-3">2021限定版</p>
+                                <p class="facility-1-2-4">￥666</p>
+                                <span class="arrow-left"> < </span>
+                                <span class="arrow-right"> > </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-1">
+                <div class="footer-1-1">
+                    <dl>
+                        <dt>家用产品</dt>
+                        <dd><a href="">穿墙宝</a></dd>
+                        <dd><a href="">路由器</a></dd>
+                        <dd><a href="">无线网卡</a></dd>
+                        <dd><a href="">交换机</a></dd>
+                        <dd><a href="">电力线</a></dd>
+                        <dd><a href="">信号放大器</a></dd>
+                        <dd><a href="">接入终端</a></dd>
+                        <dd><a href="">智能硬件</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>商用网络</dt>
+                        <dd><a href="">企业路由器</a></dd>
+                        <dd><a href="">AP控制器</a></dd>
+                        <dd><a href="">企业交换机</a></dd>
+                        <dd><a href="">企业无线AP</a></dd>
+                        <dd><a href="">室外网桥</a></dd>
+                        <dd><a href="">基站天线</a></dd>
+                        <dd><a href="">综合类</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>解决方案</dt>
+                        <dd><a href="">宾馆无线通</a></dd>
+                        <dd><a href="">企业无线通</a></dd>
+                        <dd><a href="">别墅无线通</a></dd>
+                        <dd><a href="">监控无线通</a></dd>
+                        <dd><a href="">案例中心</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>官方旗舰店</dt>
+                        <dd><a href="">腾达天猫店</a></dd>
+                        <dd><a href="">腾达京东店</a></dd>
+                        <dd><a href="">如何购买？</a></dd>
+                        <dd><a href="">售后网点</a></dd>
+                        <dd><a href="">腾达办事处</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务支持</dt>
+                        <dd><a href="">在线客服</a></dd>
+                        <dd><a href="">维修网点</a></dd>
+                        <dd><a href="">商用模拟器</a></dd>
+                        <dd><a href="">产品保修</a></dd>
+                        <dd><a href="">退市声明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>智能推荐</dt>
+                        <dd><a href="">宾馆无线方案</a></dd>
+                        <dd><a href="">企业无线方案</a></dd>
+                        <dd><a href="">娱乐无线方案</a></dd>
+                        <dd><a href="">别墅无线方案</a></dd>
+                    </dl>
+                    <div class="footer-1-2">
+                        <h4 class="iconfooter">
+                            <a href="">  400-6622-666</a>
+                        </h4>
+                        <h4 class="iconfooter-1">
+                            <a href="" class="online">在线技术客服</a>
+                        </h4>
+                        <p>服务时间段：周一至周日 9:00——21:30 （节假日除外）</p>
+                    </div>
+                </div>
+                <div class="footer-2-1">
+                    <div class="footer-2-2">
+                        <a href=""><img src="imges/tendalogo.png" alt="" width="70px" height="20px"></a>
+                        <ul class="tendalog1">
+                            <li><a href="">企业介绍</a></li>
+                            <li><a href="">联系我们</a></li>
+                            <li><a href="">企业视频</a></li>
+                            <li><a href="">社会招聘</a></li>
+                            <li><a href="">校园招聘</a></li>
+                            <li><a href="">供应商自荐平台</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tendalog2" style="text-align: center; margin-top: 25px; font-size: 20px;">
+                    版权所有&copy;网络1908唐家旭
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $(function(){
+        $('.nav .nav-item').hover(function(){
+            $(this).children('div.subMenu').stop().slideToggle(0);
+        })
+        //tab
+        $('.quickb li').click(function(){
+                $(this).addClass("quickd").siblings().removeClass('quickd');
+                var index = $(this).index();
+                console.log(index);
+                $('.quicktab .quickitem').eq(index).show().siblings().hide();
+            });
+    })
+    $(function(){
+        $('.iconservice-1 .iconservice-1-2>a').click(function(){
+             $('div.iconservice-1-2-1').stop().toggle(500)
+        })
+    })
+    $(function(){
+        $('.increment').click(function(){
+            var n = $('.itxt').val();
+            if(n==5){
+                $('.tdicona').show();
+                
+                return false;
+            }
+            // console.log(n);
+            n++;
+            $('.itxt').val(n);
+            document.querySelector(".yuan").innerHTML=149*n+".00"
+        })
+
+        $('.decrement').click(function(){
+            var n = $('.itxt').val();
+            if(n>1){
+                // console.log(n);
+                $('.tdicona').hide();
+                n--;
+                $('.itxt').val(n);
+                document.querySelector(".yuan").innerHTML=149*n+".00"
+            }
+        })
+
+
+        var this_num=0
+        $('.btnlg').click(function(){
+            if(this_num==0){
+                $('.tdicon').show();
+            document.querySelector('.btnlg').innerHTML='取消加入';
+            this_num=1
+            }else{
+                $('.tdicon').hide();
+                document.querySelector('.btnlg').innerHTML='加入购物车';
+                this_num=0
+            }
+            
+        })
+        //tab
+        $('.quickb li').click(function(){
+                $(this).addClass("quickd").siblings().removeClass('quickd');
+                var index = $(this).index();
+                console.log(index);
+                $('.quicktab .quickitem').eq(index).show().siblings().hide();
+            });
+        
+    })
+    //加减商品
+    // var decrement = document.querySelector('.decrement');
+    // var increment = document.querySelector('.increment');
+    // var itxt = document.querySelector('.itxt');
+
+    // function add(){
+    //     itxt.value = parseInt(itxt.value) + 1
+    // }
+
+    // function dec() {
+    //         if (parseInt(itxt.value) > 1) {
+    //             itxt.value = parseInt(itxt.value) - 1
+    //         } else {
+    //             alert('至少买一件')
+    //         }
+    // }
+    
+</script>
+</body>
+</html>

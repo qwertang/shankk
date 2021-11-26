@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速链接访问产品</title>
+    <link rel="stylesheet" href="css/导航栏.css">
+    <link rel="stylesheet" href="css/三个div一键.css">
+    <link rel="shortcut icon" href="imges/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/页脚.css">
+    <link rel="stylesheet" href="icofont/iconfont.css">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .quick-1{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background: url('imges/probanner2.jpg')  center top;
+        width: 100%;
+        height: 480px;
+    }
+    .quick-1-1{
+        width: 90%;
+        height: 400px;
+        background-color:transparent;
+        margin: 0 auto;
+    }
+    .quick-2{
+        padding-top: 170px;
+    }
+    .quicka{
+        text-align: center;
+    }
+    .quickaa{
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+        background-color:rgb(253,79,0);
+        transition: all 0.3s;
+        border-radius: 2px;
+        border: 2px transparent solid;
+        padding: 10px 25px;
+        font-weight: normal;
+        font-size: 14px;
+        margin-top: 50px;
+    }
+    @-webkit-keyframes quicka{
+        0%{
+            opacity: 0;
+            -webkit-animation: translateY(150px);
+        }
+        100%{
+            opacity: 1;
+		    -webkit-transform: translateY(0);
+        }
+    } 
+    @keyframes quicka {
+        0% {
+            opacity: 0;
+            transform: translateY(150px);
+                
+        }	
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            top: 0px;
+        }
+    }
+    div.quick-2 h2{
+        -webkit-animation-name: "quicka";
+        -webkit-animation-duration: 0.8s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quick-2 p{
+        -webkit-animation-name: "quicka";
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicka a{
+        -webkit-animation-name: "quicka";
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: 1;
+    }
+    .quickb{
+        width: 100%;
+        height: 64px;
+        background-color: rgb(243, 243, 243);
+        margin-top: 0;
+    }
+    .quickb ul{
+        display: block;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .quickb ul li{
+        display: inline-block;
+        width: 136px;
+        height: 64px;
+        line-height: 60px;
+        
+        cursor: pointer;
+    }
+    .quickd{
+        background-color: rgb(255, 255, 255);
+        color: rgb(168, 168, 168);
+    }
+    .quickb ul li.line{
+        width: 1px;
+        height: 64px;
+        line-height: 60px;
+        background-color: rgba(255, 255, 255, 0.05);
+        vertical-align: middle;
+    }
+    .quickitem{
+        display: none;
+    }
+    .quicktab-1{
+        width: 100%;
+        height: 950px;;
+        /* background-color: blanchedalmond; */
+    }
+    .quicltab-1-1{
+        width: 100%;
+        height: 430px;
+        background-color: rgb(255, 255, 255);
+    }
+    .quicktab-1-2{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-left: 5%;
+        overflow: hidden;
+    }
+    .quicktab-1-2 h1{
+        font-weight: 500;
+        font-size: 20px;
+        color: #fd4f00;
+        padding-bottom: 25px;
+        border-bottom: 1px solid coral;
+    }
+    .quicktab-1-2 p{
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+    .quicltab-2-1{
+        width: 100%;
+        height: 500px;
+        background-color: rgb(247, 247, 247);
+    }
+    .quicltab-2-1 h2{
+        font-size: 20px;
+        font-weight: 400;
+        color: #fd4f00;
+        padding-bottom: 30px;
+        margin-left: 80px;
+        padding-top: 25px;
+    }
+    .quicltab-2-2{
+        width: 100%;
+    }
+    .quicltab-2-2 p{
+        font-size: 14px;
+        font-family: 250;
+        padding-bottom: 40px;
+        color: rgb(92, 92, 92);
+    }
+    .quicltab-2-3{
+        width: 40%;
+        height: 300px;
+        /* background-color: aqua; */
+        float: left;
+        margin-left: 80px;
+    }
+    .quicltab-2-4{
+        width: 40%;
+        height: 300px;
+        /* background-color: blueviolet; */
+        float: left;
+        margin-left: 50px;
+    }
+    .quickb ul li:hover{
+        color: #fd4f00;
+    }
+    @-webkit-keyframes quicktab{
+        0%{
+            opacity: 0;
+            -webkit-animation: translateX(250px);
+        }
+        100%{
+            opacity: 1;
+		    -webkit-transform: translateX(0);
+        }
+    } 
+    @keyframes quicktab {
+        0% {
+            opacity: 0;
+            transform: translateX(250px);
+                
+        }	
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+            top: 0px;
+        }
+    }
+    div.quickb li:nth-child(1){
+        -webkit-animation-name: "quicktab";
+        -webkit-animation-duration: 0.8s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quickb li:nth-child(2){
+        -webkit-animation-name: "quicktab";
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quickb li:nth-child(3){
+        -webkit-animation-name: "quicktab";
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quickb li:nth-child(4){
+        -webkit-animation-name: "quicktab";
+        -webkit-animation-duration: 2.5s;
+        -webkit-animation-iteration-count: 1;
+    }
+    @-webkit-keyframes quicktaba{
+        0%{
+            opacity: 0;
+            -webkit-animation: translateY(-450px);
+        }
+        100%{
+            opacity: 1;
+		    -webkit-transform: translateX(0);
+        }
+    } 
+    @keyframes quicktaba {
+        0% {
+            opacity: 0;
+            transform: translateY(-450px);
+                
+        }	
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+            top: 0px;
+        }
+    }
+    div.quicktab-1-2 h1{
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicktab-1-2 p:nth-child(3){
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicktab-1-2 p:nth-child(4){
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicktab-1-2 p:nth-child(5){
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 2.5s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicktab-1-2 p:nth-child(6){
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 3s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicktab-1-2 p:nth-child(7){
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 3.2s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicktab-1-2 p:nth-child(8){
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 3.5s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicltab-2-1 h2{
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicltab-2-2 div img{
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: 1;
+    }
+    div.quicltab-2-2 div p{
+        -webkit-animation-name: "quicktaba";
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: 1;
+    }
+</style>
+<body>
+    <div class="quick">
+        <div class="iconservice">
+            <div class="iconservice-1-1">
+                <a href="index.html"><span class="iconfont icon-zaixiankefu"></span></a>
+            </div>
+        </div>
+        <div class="iconservice-1">
+            <div class="iconservice-1-2">
+                <a href="javascript:;;"><span class="iconfont icon-erweima"></span></a>
+                <div class="iconservice-1-2-1">
+                    <img src="imges/二维码1.jpg" alt="" width="150px" height="150px" >
+                </div>
+            </div>
+        </div>
+        <div class="iconservice-2">
+            <div class="iconservice-1-3"><a href="#"><span class="iconfont icon-fanhui3"></span></a></div>
+        </div>
+        <header>
+            <div class="tenda">
+                <nav id="nav">
+                    <div class="logo">
+                        <a href="index.html"><img src="imges/mlogo1.png" alt=""></a>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="register.html" >点击登录</a>
+                            <!-- <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">穿墙宝<img src="imgesicon/1.png" alt=""></a></li>
+                                    <li><a href="#">路由器<img src="imgesicon/2.png" alt=""></a></li>
+                                    <li><a href="#">无线网卡<img src="imgesicon/3.png" alt=""></a></li>
+                                    <li><a href="#">交换机<img src="imgesicon/4.png" alt=""></a></li>
+                                    <li><a href="#">电力线<img src="imgesicon/5.png" alt=""></a></li>
+                                    <li><a href="#">信号放大器<img src="imgesicon/6.png" alt=""></a></li>
+                                    <li><a href="#">解入终端<img src="imgesicon/7.png" alt=""></a></li>
+                                    <li><a href="#">智能硬器<img src="imgesicon/8.png" alt=""></a></li>
+                                </ul>
+                            </div> -->
+                        </li>
+                        <li class="nav-item"><a href="router.html">商用产品</a>
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">企业路由器<img src="imgesicon/9.png" alt=""></a></li>
+                                    <li><a href="#">AP控制器<img src="imgesicon/10.png" alt=""></a></li>
+                                    <li><a href="#">企业交换机<img src="imgesicon/11.png" alt=""></a></li>
+                                    <li><a href="#">企业无线AP<img src="imgesicon/12.png" alt=""></a></li>
+                                    <li><a href="#">室外网桥&基站<img src="imgesicon/13.png" alt=""></a></li>
+                                    <li><a href="#">基站天线<img src="imgesicon/14.png" alt=""></a></li>
+                                    <li><a href="#">综合类<img src="imgesicon/15.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="smartcamera.html">安防监控</a>
+                            <!-- 二级菜单 S-->
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">智能摄像头<img src="imgesicon/16.png" alt=""></a></li>
+                                    <li><a href="#">监控套装<img src="imgesicon/17.png" alt=""></a></li>
+                                    <li><a href="#">影像硬盘<img src="imgesicon/18.png" alt=""></a></li>
+                                    <li><a href="#">腾达CP7<img src="imgesicon/19.png" alt=""></a></li>
+                                    <li><a href="#">腾达智能SP<img src="imgesicon/20.png" alt=""></a></li>
+                                    <li><a href="#">CP4<img src="imgesicon/21.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="servesustain.html">服务支持</a>
+                            <!-- 二级菜单 S-->
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">在线客服<img src="imgesicon/22.png" alt=""></a></li>
+                                    <li><a href="#">维修网点<img src="imgesicon/23.png" alt=""></a></li>
+                                    <li><a href="#">视频教程<img src="imgesicon/24.png" alt=""></a></li>
+                                    <li><a href="#">宣传视频<img src="imgesicon/25.png" alt=""></a></li>
+                                    <li><a href="#">下载中心<img src="imgesicon/26.png" alt=""></a></li>
+                                    <li><a href="#">保修政策<img src="imgesicon/27.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <!-- 二级菜单 E-->                    
+                        </li>
+                        <li class="nav-item"><a href="buyproduct.html">如何购买</a>
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">宾馆<img src="imgesicon/28.png" alt=""></a></li>
+                                    <li><a href="#">视频监控<img src="imgesicon/29.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="quick.html">快速链接</a>
+                            <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">关于腾达<img src="imgesicon/30.png" alt=""></a></li>
+                                    <li><a href="#">联系我们<img src="imgesicon/31.png" alt=""></a></li>
+                                    <li><a href="#">售后网点<img src="imgesicon/32.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="tendacomm.html">腾达商品</a>
+                            <!-- <div class="subMenu">
+                                <ul class="wrap">
+                                    <li><a href="#">关于腾达<img src="imgesicon/30.png" alt=""></a></li>
+                                    <li><a href="#">联系我们<img src="imgesicon/31.png" alt=""></a></li>
+                                    <li><a href="#">售后网点<img src="imgesicon/32.png" alt=""></a></li>
+                                </ul>
+                            </div> -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="quick-1">
+            <div class="quick-1-1">
+                <div class="quick-2">
+                    <h2 style="font-size: 30px; color: white; text-align: center; margin-bottom: 30px;">腾达Product介绍</h2>
+                    <p style="font-size: 20px; color: white; text-align: center;">致力于为世界建设值得信赖的好网络</p>
+                    <div class="quicka">
+                        <a href="" class="quickaa" style="font-size: 14px; color: white;">腾达介绍视频</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quickb">
+            <ul>
+                <li class="quickd">腾达introduce</li>
+                <li>腾达touch</li>
+                <li>腾达anniversary</li>
+                <li>腾达weblog</li>
+            </ul>
+        </div>
+        <div class="quicktab">
+            <div class="quickitem" style="display: block;">
+                <div class="quicktab-1">
+                    <div class="quicltab-1-1">
+                        <div class="quicktab-1-2">
+                            <h1>腾达(Tenda)简介</h1>
+                            <div class="quicktabaa"> </div>
+                            <p>深圳市吉祥腾达科技有限公司于1999年创立。十几年来，公司跟随世界互联网产业的迅猛扩张，致力于为世界建设值得信赖的好网络，不断发展壮大，成长为全球领先的网络设备提供商。</p>
+                            <p>科技创新，是腾达科技的灵魂。公司拥有近千人的研发团队，在深圳、成都成立了双研发基地，拥有3000多人的生产中心，同时，一个建筑面积达12万平方米的腾达生产基地正在规划建设之中。</p>
+                            <p>企业使命：让任何智能终端设备在任何地方，都能便捷、安全、高速地接入互联网和智能化的管理，实现人们智能化的生活。</p>
+                            <p>企业愿景：建设值得信赖的好网络，赢得客户的选择和尊重。</p>
+                            <p>服务理念：超强价值、卓越品质、专业服务</p>
+                            <p>企业精神：自强不息、勇于创新、诚实守信</p>
+                        </div>
+                    </div>
+                    <div class="quicltab-2-1">
+                        <h2>我们的业务</h2>
+                        <div class="quicltab-2-2">
+                            <div class="quicltab-2-3"><img src="imges/hj-2.jpg" alt="" height="400px"></div>
+                            <div class="quicltab-2-4">
+                                <p>公司产品涵盖：家用无线、商用无线、交换机、接入终端、PLC电力网等，产品系列达30多种。他们共同的特点是：性能强大，信号稳定，部署方便，安装容易，质优价廉。</p>
+                                <p>腾达立足中国，服务全球，将触角伸到世界每一个角落。公司在北京、上海、广州、武汉、郑州、重庆等一线城市设立十多个分公司，并在各地设立50多个办事处。</p>
+                                <p>在美国、德国、波兰、巴西、澳大利亚、俄罗斯、印度、印尼等国家建立海外分公司或办事处，与全球一百多家顶级代理商建立合作关系，腾达产品出口全球80余个国家和地区。截至2014年第三季度，腾达产品销售总量累计超过5亿台。</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quickitem">
+                <div class="quicktab-1">
+                    <div class="quicltab-1-1">
+                        <div class="quicktab-1-2">
+                            <h1>腾达(Tenda)简介</h1>
+                            <div class="quicktabaa"> </div>
+                            <p>深圳市吉祥腾达科技有限公司于1999年创立。十几年来，公司跟随世界互联网产业的迅猛扩张，致力于为世界建设值得信赖的好网络，不断发展壮大，成长为全球领先的网络设备提供商。</p>
+                            <p>科技创新，是腾达科技的灵魂。公司拥有近千人的研发团队，在深圳、成都成立了双研发基地，拥有3000多人的生产中心，同时，一个建筑面积达12万平方米的腾达生产基地正在规划建设之中。</p>
+                            <p>企业使命：让任何智能终端设备在任何地方，都能便捷、安全、高速地接入互联网和智能化的管理，实现人们智能化的生活。</p>
+                            <p>企业愿景：建设值得信赖的好网络，赢得客户的选择和尊重。</p>
+                            <p>服务理念：超强价值、卓越品质、专业服务</p>
+                            <p>企业精神：自强不息、勇于创新、诚实守信</p>
+                        </div>
+                    </div>
+                    <div class="quicltab-2-1">
+                        <h2>我们的业务</h2>
+                        <div class="quicltab-2-2">
+                            <div class="quicltab-2-3"><img src="imges/hj-2.jpg" alt="" height="400px"></div>
+                            <div class="quicltab-2-4">
+                                <p>公司产品涵盖：家用无线、商用无线、交换机、接入终端、PLC电力网等，产品系列达30多种。他们共同的特点是：性能强大，信号稳定，部署方便，安装容易，质优价廉。</p>
+                                <p>腾达立足中国，服务全球，将触角伸到世界每一个角落。公司在北京、上海、广州、武汉、郑州、重庆等一线城市设立十多个分公司，并在各地设立50多个办事处。</p>
+                                <p>在美国、德国、波兰、巴西、澳大利亚、俄罗斯、印度、印尼等国家建立海外分公司或办事处，与全球一百多家顶级代理商建立合作关系，腾达产品出口全球80余个国家和地区。截至2014年第三季度，腾达产品销售总量累计超过5亿台。</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quickitem">
+                <div class="quicktab-1">
+                    <div class="quicltab-1-1">
+                        <div class="quicktab-1-2">
+                            <h1>腾达(Tenda)简介</h1>
+                            <div class="quicktabaa"> </div>
+                            <p>深圳市吉祥腾达科技有限公司于1999年创立。十几年来，公司跟随世界互联网产业的迅猛扩张，致力于为世界建设值得信赖的好网络，不断发展壮大，成长为全球领先的网络设备提供商。</p>
+                            <p>科技创新，是腾达科技的灵魂。公司拥有近千人的研发团队，在深圳、成都成立了双研发基地，拥有3000多人的生产中心，同时，一个建筑面积达12万平方米的腾达生产基地正在规划建设之中。</p>
+                            <p>企业使命：让任何智能终端设备在任何地方，都能便捷、安全、高速地接入互联网和智能化的管理，实现人们智能化的生活。</p>
+                            <p>企业愿景：建设值得信赖的好网络，赢得客户的选择和尊重。</p>
+                            <p>服务理念：超强价值、卓越品质、专业服务</p>
+                            <p>企业精神：自强不息、勇于创新、诚实守信</p>
+                        </div>
+                    </div>
+                    <div class="quicltab-2-1">
+                        <h2>我们的业务</h2>
+                        <div class="quicltab-2-2">
+                            <div class="quicltab-2-3"><img src="imges/hj-2.jpg" alt="" height="400px"></div>
+                            <div class="quicltab-2-4">
+                                <p>公司产品涵盖：家用无线、商用无线、交换机、接入终端、PLC电力网等，产品系列达30多种。他们共同的特点是：性能强大，信号稳定，部署方便，安装容易，质优价廉。</p>
+                                <p>腾达立足中国，服务全球，将触角伸到世界每一个角落。公司在北京、上海、广州、武汉、郑州、重庆等一线城市设立十多个分公司，并在各地设立50多个办事处。</p>
+                                <p>在美国、德国、波兰、巴西、澳大利亚、俄罗斯、印度、印尼等国家建立海外分公司或办事处，与全球一百多家顶级代理商建立合作关系，腾达产品出口全球80余个国家和地区。截至2014年第三季度，腾达产品销售总量累计超过5亿台。</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quickitem">
+                <div class="quicktab-1">
+                    <div class="quicltab-1-1">
+                        <div class="quicktab-1-2">
+                            <h1>腾达(Tenda)简介</h1>
+                            <div class="quicktabaa"> </div>
+                            <p>深圳市吉祥腾达科技有限公司于1999年创立。十几年来，公司跟随世界互联网产业的迅猛扩张，致力于为世界建设值得信赖的好网络，不断发展壮大，成长为全球领先的网络设备提供商。</p>
+                            <p>科技创新，是腾达科技的灵魂。公司拥有近千人的研发团队，在深圳、成都成立了双研发基地，拥有3000多人的生产中心，同时，一个建筑面积达12万平方米的腾达生产基地正在规划建设之中。</p>
+                            <p>企业使命：让任何智能终端设备在任何地方，都能便捷、安全、高速地接入互联网和智能化的管理，实现人们智能化的生活。</p>
+                            <p>企业愿景：建设值得信赖的好网络，赢得客户的选择和尊重。</p>
+                            <p>服务理念：超强价值、卓越品质、专业服务</p>
+                            <p>企业精神：自强不息、勇于创新、诚实守信</p>
+                        </div>
+                    </div>
+                    <div class="quicltab-2-1">
+                        <h2>我们的业务</h2>
+                        <div class="quicltab-2-2">
+                            <div class="quicltab-2-3"><img src="imges/hj-2.jpg" alt="" height="400px"></div>
+                            <div class="quicltab-2-4">
+                                <p>公司产品涵盖：家用无线、商用无线、交换机、接入终端、PLC电力网等，产品系列达30多种。他们共同的特点是：性能强大，信号稳定，部署方便，安装容易，质优价廉。</p>
+                                <p>腾达立足中国，服务全球，将触角伸到世界每一个角落。公司在北京、上海、广州、武汉、郑州、重庆等一线城市设立十多个分公司，并在各地设立50多个办事处。</p>
+                                <p>在美国、德国、波兰、巴西、澳大利亚、俄罗斯、印度、印尼等国家建立海外分公司或办事处，与全球一百多家顶级代理商建立合作关系，腾达产品出口全球80余个国家和地区。截至2014年第三季度，腾达产品销售总量累计超过5亿台。</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-1">
+                <div class="footer-1-1">
+                    <dl>
+                        <dt>家用产品</dt>
+                        <dd><a href="">穿墙宝</a></dd>
+                        <dd><a href="">路由器</a></dd>
+                        <dd><a href="">无线网卡</a></dd>
+                        <dd><a href="">交换机</a></dd>
+                        <dd><a href="">电力线</a></dd>
+                        <dd><a href="">信号放大器</a></dd>
+                        <dd><a href="">接入终端</a></dd>
+                        <dd><a href="">智能硬件</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>商用网络</dt>
+                        <dd><a href="">企业路由器</a></dd>
+                        <dd><a href="">AP控制器</a></dd>
+                        <dd><a href="">企业交换机</a></dd>
+                        <dd><a href="">企业无线AP</a></dd>
+                        <dd><a href="">室外网桥</a></dd>
+                        <dd><a href="">基站天线</a></dd>
+                        <dd><a href="">综合类</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>解决方案</dt>
+                        <dd><a href="">宾馆无线通</a></dd>
+                        <dd><a href="">企业无线通</a></dd>
+                        <dd><a href="">别墅无线通</a></dd>
+                        <dd><a href="">监控无线通</a></dd>
+                        <dd><a href="">案例中心</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>官方旗舰店</dt>
+                        <dd><a href="">腾达天猫店</a></dd>
+                        <dd><a href="">腾达京东店</a></dd>
+                        <dd><a href="">如何购买？</a></dd>
+                        <dd><a href="">售后网点</a></dd>
+                        <dd><a href="">腾达办事处</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务支持</dt>
+                        <dd><a href="">在线客服</a></dd>
+                        <dd><a href="">维修网点</a></dd>
+                        <dd><a href="">商用模拟器</a></dd>
+                        <dd><a href="">产品保修</a></dd>
+                        <dd><a href="">退市声明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>智能推荐</dt>
+                        <dd><a href="">宾馆无线方案</a></dd>
+                        <dd><a href="">企业无线方案</a></dd>
+                        <dd><a href="">娱乐无线方案</a></dd>
+                        <dd><a href="">别墅无线方案</a></dd>
+                    </dl>
+                    <div class="footer-1-2">
+                        <h4 class="iconfooter">
+                            <a href="">  400-6622-666</a>
+                        </h4>
+                        <h4 class="iconfooter-1">
+                            <a href="" class="online">在线技术客服</a>
+                        </h4>
+                        <p>服务时间段：周一至周日 9:00——21:30 （节假日除外）</p>
+                    </div>
+                </div>
+                <div class="footer-2-1">
+                    <div class="footer-2-2">
+                        <a href=""><img src="imges/tendalogo.png" alt="" width="70px" height="20px"></a>
+                        <ul class="tendalog1">
+                            <li><a href="">企业介绍</a></li>
+                            <li><a href="">联系我们</a></li>
+                            <li><a href="">企业视频</a></li>
+                            <li><a href="">社会招聘</a></li>
+                            <li><a href="">校园招聘</a></li>
+                            <li><a href="">供应商自荐平台</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tendalog2" style="text-align: center; margin-top: 25px; font-size: 20px;">
+                    版权所有&copy;网络1908唐家旭
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('.nav .nav-item').hover(function(){
+            $(this).children('div.subMenu').stop().slideToggle(0);
+        })
+        //tab
+        $('.quickb li').click(function(){
+                $(this).addClass("quickd").siblings().removeClass('quickd');
+                var index = $(this).index();
+                console.log(index);
+                $('.quicktab .quickitem').eq(index).show().siblings().hide();
+            });
+    })
+    $(function(){
+        $('.iconservice-1 .iconservice-1-2>a').click(function(){
+             $('div.iconservice-1-2-1').stop().toggle(500)
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+.iconservice{
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background-color: rgb(236, 236, 236);
+    position: fixed;
+    margin-top: 400px;
+    margin-left: 95%;
+    z-index: 10;
+    border: 2px solid rgb(236, 236, 236);
+}
+.iconservice-1-1,.iconservice-1-2,.iconservice-1-3{
+    margin-top: 5px;
+}
+.iconservice-1-1 a span:hover,.iconservice-1-2 a span:hover,.iconservice-1-3 a span:hover{
+    color: coral;
+}
+.iconservice-1{
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background-color: rgb(236, 236, 236);
+    position: fixed;
+    margin-top: 470px;
+    margin-left: 95%;
+    z-index: 10;
+    border: 2px solid rgb(236, 236, 236);
+}
+.iconservice-1 img{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.iconservice-2{
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background-color: rgb(236, 236, 236);
+    position: fixed;
+    margin-top: 540px;
+    margin-left: 95%;
+    z-index: 10;
+    border: 2px solid rgb(236, 236, 236);
+}
+.iconservice-2 img{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.iconservice-1-2-1{
+    width: 150px;
+    height: 150px;
+    margin-left: -180px;
+    margin-top: -80px;
+    display: none;
+}
+.iconservice:hover{
+    border-color: coral;
+}
+.iconservice-1:hover{
+    border-color: coral;
+}
+.iconservice-2:hover{
+    border-color: coral;
+}
+
+@-webkit-keyframes yij{
+    0%{
+        opacity: 0;
+        -webkit-animation: translateX(150px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+@keyframes yij {
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }	
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+div.iconservice{
+    -webkit-animation-name: "yij";
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
+}
+div.iconservice-1{
+    -webkit-animation-name: "yij";
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+}
+div.iconservice-2{
+    -webkit-animation-name: "yij";
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-iteration-count: 1;
+}

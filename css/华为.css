@@ -1,0 +1,96 @@
+.facility{
+    width: 1210px;
+    height: 604px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.facility-1-1 li.facility-1-2{
+    width: 230px;
+    height: 290px;
+    list-style: none;
+    float: left;
+    background-color: rgb(249, 249, 249);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.facility-1-2 div.facility-1-2-1 img{
+    margin-top: 35px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.facility-1-2 .facility-1-2-2 {
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+.facility-1-2 .facility-1-2-3{
+    color: #777;
+    line-height: 18px;
+    font-size: 13px;
+    text-align: center;
+    margin: 2px 20px 7px;
+    padding: 0px 10px 0;
+}
+.facility-1-2 .facility-1-2-4{
+    color: #d0021b;
+    margin: 0px 20px 0px;
+    text-align: center;
+}
+.facility-1-2-1{
+    overflow: hidden;
+}
+.facility-1-2 div.facility-1-2-1 a>img{
+    cursor: pointer;
+    transition: 0.8s;
+}
+.facility-1-2 div.facility-1-2-1 a>img:hover{
+    transform: scale(1.15);
+}
+.arrow-left,.arrow-right{
+    font-size: 25px;
+    font-weight: bolder;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    color: rgb(185, 185, 185);
+    background-color: rgb(212, 212, 212,.7);
+    border-radius:50%;
+    display: none;
+}
+.arrow-left{
+    position: absolute;
+    margin-top: -150px;
+}
+.arrow-right{
+    position: absolute;
+    margin-left: 195px;
+    margin-top: -150px;
+}
+.facility-big{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.hwlbt{
+    width: 1888px;
+    height: 290px;
+    animation: hwlbt 7s infinite  1s;
+}
+.hwlbt img{
+    float: left;
+}
+@keyframes hwlbt {
+    35%{
+        margin-left: -472px;
+    }
+    70%{
+        margin-left: -944px;
+    }
+    100%{
+        margin-left: -1416px;
+    }
+}
